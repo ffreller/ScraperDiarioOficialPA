@@ -4,7 +4,7 @@ import difflib
 import re
 
 # year = 2015
-years = [2015, 2016, 2017, 2018, 2019, 2020]
+years = [2021, 2020]
 
 
 def fuzzy_merge(df1, df2, left_on, right_on, how='inner', cutoff=0.6):

@@ -57,11 +57,11 @@ def update_links(filename):
 
 
 def make_links(filename):
-    startdate = '01/01/2017'
+    startdate = '01/11/2020'
     startdate = datetime.strptime(startdate, '%d/%m/%Y')
     today = date.today()
     days1 = list(date_range(startdate, today, freq='d'))
     df = linksbypage(days1)
     df.to_csv(filename)
 
-# make_links('LinksDOE.csv')
+make_links('LinksDOE.csv')

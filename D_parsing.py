@@ -5,8 +5,8 @@ from ast import literal_eval
 from tqdm import tqdm
 from datetime import datetime
 
-year = 2015
-# years = [2020, 2019, 2018, 2017, 2016, 2015]
+# year = 2015
+years = [2021, 2020]
 
 
 def get_location(startpage, filename):
@@ -368,8 +368,8 @@ def update_dfparsed(yr):
 # ndf = make_dfparsed(year)
 # print(len(ndf))
 
-# for year in years:
-#     ndf = make_dfparsed(year)
+for year in years:
+    ndf = make_dfparsed(year)
 #     # CORRIGINDO PROBLEMA ##############################
 #     if year == 2017:
 #         txt0 = ndf[ndf['txt'].str.contains('portaria nº 0614/2017')]['txt'].iloc[0]
@@ -380,5 +380,4 @@ def update_dfparsed(yr):
 #         novarow = {'filename': finame, 'txt': novotexto}
 #         ndf = ndf.append(novarow, ignore_index=True)
 #     #####################################
-#
-#     ndf.to_csv(f'parsed{year}.csv')
+

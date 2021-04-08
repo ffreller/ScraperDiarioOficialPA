@@ -1,7 +1,7 @@
 from pandas import read_csv, DataFrame
 
 # year = 2015
-years = [2020, 2019, 2018, 2017, 2016, 2015]
+years = [2021, 2020]
 
 
 def tirar_hifenespaco(txt, word):
@@ -432,7 +432,7 @@ def terras_devolutas(row):
     txt = tirar_hifenespaco(txt, achar1)
     txt = tirar_hifenespaco(txt, achar2)
     txt = tirar_hifenespaco(txt, nachar)
-    if not row['servidor'] and not row['areas_rurais']:
+    if not row['servidor'] and not row['areas_rurais'] and not row["errata"]:
         if (achar1 in txt or achar2 in txt) and nachar not in txt:
             achou = True
     return achou

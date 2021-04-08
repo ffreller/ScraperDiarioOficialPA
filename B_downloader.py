@@ -61,8 +61,8 @@ def download_bydate(dflinks, path):
 df = read_csv('LinksDOE.csv', index_col='data')
 
 today = date.today().strftime('%Y/%m/%d')
-startdate = '2017/01/01'
-enddate = '2017/12/31'
+startdate = '2020/01/11'
+enddate = '2021/01/31'
 dfdts = df.loc[startdate:enddate]
 
 download_bydate(dfdts, 'arquivos_DOE')

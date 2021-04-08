@@ -5,8 +5,8 @@ from datetime import datetime
 from PyPDF2 import PdfFileReader
 import pdfplumber
 
-year = 2015
-# years = [2015, 2016, 2017, 2018, 2019, 2020]
+# year = 2015
+years = [2020, 2021]
 
 
 class DiarioPDF:
@@ -213,7 +213,7 @@ def update_df(yr):
     return df1
 
 
-# for year in years:
-#     df0 = make_df(year)
+for year in years:
+    df0 = make_df(year)
 
-df0 = make_df(year)
+# df0 = make_df(year)
